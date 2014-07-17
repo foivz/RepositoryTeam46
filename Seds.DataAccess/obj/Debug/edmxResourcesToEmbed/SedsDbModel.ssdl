@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SEDSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Certificates">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CertificateNumber" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TypeId" Type="int" Nullable="false" />
+    <Property Name="GraduationDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CertificateTypes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CourseGroups">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="50" />
+    <Property Name="TitleName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="OrganizationalUnit_CourseGroupes">
+    <Key>
+      <PropertyRef Name="OrganizationalUnitId" />
+      <PropertyRef Name="CourseGroupId" />
+    </Key>
+    <Property Name="OrganizationalUnitId" Type="int" Nullable="false" />
+    <Property Name="CourseGroupId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrganizationalUnits">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="50" />
+    <Property Name="TitleName" Type="varchar" MaxLength="50" />
+    <Property Name="IdIsvu" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Student_Certificates">
+    <Key>
+      <PropertyRef Name="StudentId" />
+      <PropertyRef Name="CertificateId" />
+    </Key>
+    <Property Name="StudentId" Type="int" Nullable="false" />
+    <Property Name="CertificateId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Student_Studies">
+    <Key>
+      <PropertyRef Name="StudentId" />
+      <PropertyRef Name="StudyId" />
+    </Key>
+    <Property Name="StudentId" Type="int" Nullable="false" />
+    <Property Name="StudyId" Type="int" Nullable="false" />
+    <Property Name="EnrollmentYear" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Students">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BirthLastName" Type="varchar" MaxLength="50" />
+    <Property Name="Gender" Type="int" Nullable="false" />
+    <Property Name="BirthDate" Type="datetime" Nullable="false" />
+    <Property Name="JMBG" Type="char" MaxLength="13" Nullable="false" />
+    <Property Name="OIB" Type="char" MaxLength="11" Nullable="false" />
+    <Property Name="UniqueNumber" Type="int" Nullable="false" />
+    <Property Name="AverageRating" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="AverageGroup1" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="AverageGroup2" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Verified" Type="bit" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="50" />
+    <Property Name="ImagePath" Type="varchar" MaxLength="50" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Studies">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CourseGroupId" Type="int" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Duration" Type="int" Nullable="false" />
+    <Property Name="ECTS" Type="int" Nullable="false" />
+    <Property Name="TypeId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StudyTypes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="User_Roles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Certificates_CertificateTypes">
+    <End Role="CertificateTypes" Type="Self.CertificateTypes" Multiplicity="1" />
+    <End Role="Certificates" Type="Self.Certificates" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CertificateTypes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Certificates">
+        <PropertyRef Name="TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrganizationalUnit_CourseGroupes_CourseGroups">
+    <End Role="CourseGroups" Type="Self.CourseGroups" Multiplicity="1" />
+    <End Role="OrganizationalUnit_CourseGroupes" Type="Self.OrganizationalUnit_CourseGroupes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CourseGroups">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrganizationalUnit_CourseGroupes">
+        <PropertyRef Name="CourseGroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrganizationalUnit_CourseGroupes_OrganizationalUnits">
+    <End Role="OrganizationalUnits" Type="Self.OrganizationalUnits" Multiplicity="1" />
+    <End Role="OrganizationalUnit_CourseGroupes" Type="Self.OrganizationalUnit_CourseGroupes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrganizationalUnits">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrganizationalUnit_CourseGroupes">
+        <PropertyRef Name="OrganizationalUnitId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_Certificates_Certificates">
+    <End Role="Certificates" Type="Self.Certificates" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Student_Certificates" Type="Self.Student_Certificates" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Certificates">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Student_Certificates">
+        <PropertyRef Name="CertificateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_Certificates_Students">
+    <End Role="Students" Type="Self.Students" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Student_Certificates" Type="Self.Student_Certificates" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Students">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Student_Certificates">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_Studies_Students">
+    <End Role="Students" Type="Self.Students" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Student_Studies" Type="Self.Student_Studies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Students">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Student_Studies">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_Studies_Studies">
+    <End Role="Studies" Type="Self.Studies" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Student_Studies" Type="Self.Student_Studies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Studies">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Student_Studies">
+        <PropertyRef Name="StudyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Studies_CourseGroups">
+    <End Role="CourseGroups" Type="Self.CourseGroups" Multiplicity="1" />
+    <End Role="Studies" Type="Self.Studies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CourseGroups">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Studies">
+        <PropertyRef Name="CourseGroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Studies_StudyTypes">
+    <End Role="StudyTypes" Type="Self.StudyTypes" Multiplicity="1" />
+    <End Role="Studies" Type="Self.Studies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StudyTypes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Studies">
+        <PropertyRef Name="TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Roles_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="User_Roles" Type="Self.User_Roles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="User_Roles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Roles">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spSearchStudents" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Phrase" Type="varchar(max)" Mode="In" />
+  </Function>
+  <EntityContainer Name="SEDSModelStoreContainer">
+    <EntitySet Name="Certificates" EntityType="Self.Certificates" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CertificateTypes" EntityType="Self.CertificateTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CourseGroups" EntityType="Self.CourseGroups" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrganizationalUnit_CourseGroupes" EntityType="Self.OrganizationalUnit_CourseGroupes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrganizationalUnits" EntityType="Self.OrganizationalUnits" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Student_Certificates" EntityType="Self.Student_Certificates" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Student_Studies" EntityType="Self.Student_Studies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Students" EntityType="Self.Students" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Studies" EntityType="Self.Studies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudyTypes" EntityType="Self.StudyTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User_Roles" EntityType="Self.User_Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Certificates_CertificateTypes" Association="Self.FK_Certificates_CertificateTypes">
+      <End Role="CertificateTypes" EntitySet="CertificateTypes" />
+      <End Role="Certificates" EntitySet="Certificates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrganizationalUnit_CourseGroupes_CourseGroups" Association="Self.FK_OrganizationalUnit_CourseGroupes_CourseGroups">
+      <End Role="CourseGroups" EntitySet="CourseGroups" />
+      <End Role="OrganizationalUnit_CourseGroupes" EntitySet="OrganizationalUnit_CourseGroupes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrganizationalUnit_CourseGroupes_OrganizationalUnits" Association="Self.FK_OrganizationalUnit_CourseGroupes_OrganizationalUnits">
+      <End Role="OrganizationalUnits" EntitySet="OrganizationalUnits" />
+      <End Role="OrganizationalUnit_CourseGroupes" EntitySet="OrganizationalUnit_CourseGroupes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_Certificates_Certificates" Association="Self.FK_Student_Certificates_Certificates">
+      <End Role="Certificates" EntitySet="Certificates" />
+      <End Role="Student_Certificates" EntitySet="Student_Certificates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_Certificates_Students" Association="Self.FK_Student_Certificates_Students">
+      <End Role="Students" EntitySet="Students" />
+      <End Role="Student_Certificates" EntitySet="Student_Certificates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_Studies_Students" Association="Self.FK_Student_Studies_Students">
+      <End Role="Students" EntitySet="Students" />
+      <End Role="Student_Studies" EntitySet="Student_Studies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_Studies_Studies" Association="Self.FK_Student_Studies_Studies">
+      <End Role="Studies" EntitySet="Studies" />
+      <End Role="Student_Studies" EntitySet="Student_Studies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Studies_CourseGroups" Association="Self.FK_Studies_CourseGroups">
+      <End Role="CourseGroups" EntitySet="CourseGroups" />
+      <End Role="Studies" EntitySet="Studies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Studies_StudyTypes" Association="Self.FK_Studies_StudyTypes">
+      <End Role="StudyTypes" EntitySet="StudyTypes" />
+      <End Role="Studies" EntitySet="Studies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Roles_Users" Association="Self.FK_User_Roles_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="User_Roles" EntitySet="User_Roles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Roles" Association="Self.FK_Users_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

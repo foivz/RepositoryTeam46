@@ -1,0 +1,1397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{24231A9E-A7C1-4699-93D8-BE7C859BE47A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Seds.Web</RootNamespace>
+    <AssemblyName>Seds.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CertificateEdit.aspx" />
+    <Content Include="Certificates.aspx" />
+    <Content Include="CertificateTypeEdit.aspx" />
+    <Content Include="CertificateTypes.aspx" />
+    <Content Include="CourseGroupEdit.aspx" />
+    <Content Include="CourseGroups.aspx" />
+    <Content Include="Helps.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="OrganizationalUnitEdit.aspx" />
+    <Content Include="OrganizationalUnits.aspx" />
+    <Content Include="RoleEdit.aspx" />
+    <Content Include="Roles.aspx" />
+    <Content Include="Scripts\dewplayer\covers\0.jpg" />
+    <Content Include="Scripts\dewplayer\covers\1.jpg" />
+    <Content Include="Scripts\dewplayer\covers\2.jpg" />
+    <Content Include="Scripts\dewplayer\covers\3.jpg" />
+    <Content Include="Scripts\dewplayer\dewplayer-bubble-vol.swf" />
+    <Content Include="Scripts\dewplayer\dewplayer-bubble.swf" />
+    <Content Include="Scripts\dewplayer\dewplayer-mini-127.swf" />
+    <Content Include="Scripts\dewplayer\dewplayer-mini.swf" />
+    <Content Include="Scripts\dewplayer\dewplayer-multi.swf" />
+    <Content Include="Scripts\dewplayer\dewplayer-playlist-cover.swf" />
+    <Content Include="Scripts\dewplayer\dewplayer-playlist.swf" />
+    <Content Include="Scripts\dewplayer\dewplayer-rect.swf" />
+    <Content Include="Scripts\dewplayer\dewplayer-vinyl-en.swf" />
+    <Content Include="Scripts\dewplayer\dewplayer-vinyl.swf" />
+    <Content Include="Scripts\dewplayer\dewplayer-vol.swf" />
+    <Content Include="Scripts\dewplayer\dewplayer.swf" />
+    <Content Include="Scripts\dewplayer\index-swfobject-js.htm" />
+    <Content Include="Scripts\dewplayer\index-xhtml.htm" />
+    <Content Include="Scripts\dewplayer\mp3\test1.mp3" />
+    <Content Include="Scripts\dewplayer\mp3\test2.mp3" />
+    <Content Include="Scripts\dewplayer\mp3\test3.mp3" />
+    <Content Include="Scripts\dewplayer\playlist.xml" />
+    <Content Include="Scripts\dewplayer\styles.css" />
+    <Content Include="Scripts\dewplayer\swfobject.js" />
+    <Content Include="ModalMasterPage.Master" />
+    <Content Include="packages.config" />
+    <Content Include="ClassDiagram1.cd" />
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\Utils.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="Search.aspx" />
+    <Content Include="StudentEdit.aspx" />
+    <Content Include="Students.aspx" />
+    <Content Include="Studies.aspx" />
+    <Content Include="StudyEdit.aspx" />
+    <Content Include="StudyTypeEdit.aspx" />
+    <Content Include="StudyTypes.aspx" />
+    <Content Include="Themes\BlueNileAdmin\404.html" />
+    <Content Include="Themes\BlueNileAdmin\500.html" />
+    <Content Include="Themes\BlueNileAdmin\503.html" />
+    <Content Include="Themes\BlueNileAdmin\calendar.html" />
+    <Content Include="Themes\BlueNileAdmin\faq.html" />
+    <Content Include="Themes\BlueNileAdmin\help.html" />
+    <Content Include="Themes\BlueNileAdmin\images\140x140.gif" />
+    <Content Include="Themes\BlueNileAdmin\images\170x170.gif" />
+    <Content Include="Themes\BlueNileAdmin\images\background.png" />
+    <Content Include="Themes\BlueNileAdmin\images\black-Linen.png" />
+    <Content Include="Themes\BlueNileAdmin\images\blue-paper.png" />
+    <Content Include="Themes\BlueNileAdmin\images\extra_clean_paper.png" />
+    <Content Include="Themes\BlueNileAdmin\images\furley_bg.png" />
+    <Content Include="Themes\BlueNileAdmin\images\subtle_surface.png" />
+    <Content Include="Themes\BlueNileAdmin\index.html" />
+    <Content Include="Themes\BlueNileAdmin\lib\bootstrap\css\bootstrap.css" />
+    <Content Include="Themes\BlueNileAdmin\lib\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Themes\BlueNileAdmin\lib\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="Themes\BlueNileAdmin\lib\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="Themes\BlueNileAdmin\lib\bootstrap\js\bootstrap.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\css\font-awesome-ie7.css" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\css\font-awesome.css" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\css\font-awesome-ie7.css" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\css\font-awesome.css" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\css\prettify.css" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\css\site.css" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\font\fontawesome-webfont.svg" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\ico\favicon.ico" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\js\backbone.min.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\js\index\index.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\js\jquery-1.7.1.min.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\js\prettify.min.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-alert.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-button.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-carousel.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-collapse.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-dropdown.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-modal.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-popover.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-scrollspy.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-tab.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-tooltip.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-transition.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-typeahead.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\js\underscore.min.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\index.html" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\font\fontawesome-webfont.svg" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\changelog.txt" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\demos\agenda-views.html" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\demos\basic-views.html" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\demos\cupertino\theme.css" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\demos\default.html" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\demos\external-dragging.html" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\demos\gcal.html" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\demos\json.html" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\demos\selectable.html" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\demos\theme.html" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\fullcalendar\fullcalendar.css" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\fullcalendar\fullcalendar.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\fullcalendar\fullcalendar.min.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\fullcalendar\fullcalendar.print.css" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\fullcalendar\gcal.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\GPL-LICENSE.txt" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\jquery\jquery-1.7.1.min.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\jquery\jquery-ui-1.8.17.custom.min.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\MIT-LICENSE.txt" />
+    <Content Include="Themes\BlueNileAdmin\lib\jquery-1.7.2.min.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\jquery-1.8.1.min.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\bootstrap\css\bootstrap.css" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\bootstrap\js\bootstrap.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\css\font-awesome-ie7.css" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\css\font-awesome.css" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\css\font-awesome-ie7.css" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\css\font-awesome.css" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\css\prettify.css" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\css\site.css" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\font\fontawesome-webfont.svg" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\ico\favicon.ico" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\js\backbone.min.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\js\index\index.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\js\jquery-1.7.1.min.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\js\prettify.min.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-alert.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-button.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-carousel.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-collapse.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-dropdown.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-modal.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-popover.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-scrollspy.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-tab.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-tooltip.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-transition.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\js\tw-bs-201\bootstrap-typeahead.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\js\underscore.min.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\index.html" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\font\fontawesome-webfont.svg" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\changelog.txt" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\demos\agenda-views.html" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\demos\basic-views.html" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\demos\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\demos\cupertino\theme.css" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\demos\default.html" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\demos\external-dragging.html" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\demos\gcal.html" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\demos\json.html" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\demos\selectable.html" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\demos\theme.html" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\fullcalendar\fullcalendar.css" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\fullcalendar\fullcalendar.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\fullcalendar\fullcalendar.min.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\fullcalendar\fullcalendar.print.css" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\fullcalendar\gcal.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\GPL-LICENSE.txt" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\jquery\jquery-1.7.1.min.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\jquery\jquery-ui-1.8.17.custom.min.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\MIT-LICENSE.txt" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\jquery-1.7.2.min.js" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\jquery-1.8.1.min.js" />
+    <Content Include="Themes\BlueNileAdmin\media.html" />
+    <Content Include="Themes\BlueNileAdmin\privacy-policy.html" />
+    <Content Include="Themes\BlueNileAdmin\reset-password.html" />
+    <Content Include="Themes\BlueNileAdmin\sign-in.html" />
+    <Content Include="Themes\BlueNileAdmin\sign-up.html" />
+    <Content Include="Themes\BlueNileAdmin\stylesheets\elements.css" />
+    <Content Include="Themes\BlueNileAdmin\stylesheets\jquery-ui.css" />
+    <Content Include="Themes\BlueNileAdmin\stylesheets\theme.css" />
+    <Content Include="Themes\BlueNileAdmin\terms-and-conditions.html" />
+    <Content Include="Themes\BlueNileAdmin\user.html" />
+    <Content Include="Themes\BlueNileAdmin\users.html" />
+    <Content Include="Themes\Default\images\icon-create.png" />
+    <Content Include="Themes\Default\images\icon-edit.png" />
+    <Content Include="Themes\Default\images\icon-publish.png" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\ajax.txt" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\example\10_b.jpg" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\example\10_s.jpg" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\example\11_b.jpg" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\example\11_s.jpg" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\example\12_b.jpg" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\example\12_s.jpg" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\example\1_b.jpg" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\example\1_s.jpg" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\example\2_b.jpg" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\example\2_s.jpg" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\example\3_b.jpg" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\example\3_s.jpg" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\example\4_b.jpg" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\example\4_s.jpg" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\example\5_b.jpg" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\example\5_s.jpg" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\example\6_b.jpg" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\example\6_s.jpg" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\example\7_b.jpg" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\example\7_s.jpg" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\example\8_b.jpg" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\example\8_s.jpg" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\example\9_b.jpg" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\example\9_s.jpg" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\fancybox\blank.gif" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\fancybox\fancybox-x.png" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\fancybox\fancybox-y.png" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\fancybox\fancybox.png" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\fancybox\fancy_close.png" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\fancybox\fancy_loading.png" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\fancybox\fancy_nav_left.png" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\fancybox\fancy_nav_right.png" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\fancybox\fancy_shadow_e.png" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\fancybox\fancy_shadow_n.png" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\fancybox\fancy_shadow_ne.png" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\fancybox\fancy_shadow_nw.png" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\fancybox\fancy_shadow_s.png" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\fancybox\fancy_shadow_se.png" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\fancybox\fancy_shadow_sw.png" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\fancybox\fancy_shadow_w.png" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\fancybox\fancy_title_left.png" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\fancybox\fancy_title_main.png" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\fancybox\fancy_title_over.png" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\fancybox\fancy_title_right.png" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\fancybox\jquery.easing-1.3.pack.js" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\fancybox\jquery.fancybox-1.3.4.css" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\fancybox\jquery.fancybox-1.3.4.js" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\fancybox\jquery.fancybox-1.3.4.pack.js" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\fancybox\jquery.mousewheel-3.0.4.pack.js" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\index.html" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\jquery-1.4.3.min.js" />
+    <Content Include="Themes\Default\jquery.fancybox-1.3.4\style.css" />
+    <Content Include="Themes\Default\Scripts\jquery-1.7.2.min.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\langs\en.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\langs\hr.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\license.txt" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\advhr\css\advhr.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\advhr\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\advhr\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\advhr\js\rule.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\advhr\langs\en_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\advhr\langs\hr_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\advhr\rule.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\advimage\css\advimage.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\advimage\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\advimage\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\advimage\image.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\advimage\img\icon-browse.png" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\advimage\img\sample.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\advimage\js\image.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\advimage\langs\en_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\advimage\langs\hr_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\advlink\css\advlink.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\advlink\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\advlink\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\advlink\js\advlink.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\advlink\langs\en_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\advlink\langs\hr_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\advlink\link.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\advlist\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\advlist\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\autolink\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\autolink\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\autoresize\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\autoresize\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\autosave\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\autosave\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\autosave\langs\en.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\advhr\css\advhr.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\advhr\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\advhr\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\advhr\js\rule.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\advhr\langs\en_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\advhr\rule.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\advimage\css\advimage.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\advimage\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\advimage\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\advimage\image.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\advimage\img\sample.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\advimage\js\image.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\advimage\langs\en_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\advlink\css\advlink.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\advlink\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\advlink\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\advlink\js\advlink.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\advlink\langs\en_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\advlink\link.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\advlist\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\advlist\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\autolink\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\autolink\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\autoresize\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\autoresize\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\autosave\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\autosave\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\autosave\langs\en.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\bbcode\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\bbcode\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\contextmenu\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\contextmenu\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\directionality\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\directionality\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\emotions\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\emotions\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\emotions\emotions.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\emotions\img\smiley-cool.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\emotions\img\smiley-cry.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\emotions\img\smiley-embarassed.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\emotions\img\smiley-foot-in-mouth.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\emotions\img\smiley-frown.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\emotions\img\smiley-innocent.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\emotions\img\smiley-kiss.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\emotions\img\smiley-laughing.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\emotions\img\smiley-money-mouth.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\emotions\img\smiley-sealed.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\emotions\img\smiley-smile.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\emotions\img\smiley-surprised.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\emotions\img\smiley-tongue-out.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\emotions\img\smiley-undecided.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\emotions\img\smiley-wink.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\emotions\img\smiley-yell.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\emotions\js\emotions.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\emotions\langs\en_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\example\dialog.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\example\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\example\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\example\img\example.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\example\js\dialog.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\example\langs\en.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\example\langs\en_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\fullpage\css\fullpage.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\fullpage\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\fullpage\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\fullpage\fullpage.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\fullpage\js\fullpage.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\fullpage\langs\en_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\fullscreen\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\fullscreen\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\fullscreen\fullscreen.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\iespell\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\iespell\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\inlinepopups\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\inlinepopups\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\inlinepopups\skins\clearlooks2\img\alert.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\inlinepopups\skins\clearlooks2\img\button.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\inlinepopups\skins\clearlooks2\img\buttons.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\inlinepopups\skins\clearlooks2\img\confirm.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\inlinepopups\skins\clearlooks2\img\corners.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\inlinepopups\skins\clearlooks2\img\horizontal.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\inlinepopups\skins\clearlooks2\img\vertical.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\inlinepopups\skins\clearlooks2\window.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\inlinepopups\template.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\insertdatetime\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\insertdatetime\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\layer\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\layer\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\legacyoutput\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\legacyoutput\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\lists\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\lists\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\media\css\media.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\media\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\media\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\media\js\embed.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\media\js\media.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\media\langs\en_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\media\media.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\media\moxieplayer.swf" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\nonbreaking\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\nonbreaking\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\noneditable\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\noneditable\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\pagebreak\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\pagebreak\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\paste\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\paste\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\paste\js\pastetext.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\paste\js\pasteword.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\paste\langs\en_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\paste\pastetext.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\paste\pasteword.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\preview\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\preview\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\preview\example.html" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\preview\jscripts\embed.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\preview\preview.html" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\print\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\print\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\save\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\save\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\searchreplace\css\searchreplace.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\searchreplace\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\searchreplace\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\searchreplace\js\searchreplace.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\searchreplace\langs\en_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\searchreplace\searchreplace.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\spellchecker\css\content.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\spellchecker\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\spellchecker\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\spellchecker\img\wline.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\style\css\props.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\style\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\style\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\style\js\props.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\style\langs\en_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\style\props.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\tabfocus\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\tabfocus\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\table\cell.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\table\css\cell.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\table\css\row.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\table\css\table.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\table\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\table\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\table\js\cell.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\table\js\merge_cells.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\table\js\row.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\table\js\table.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\table\langs\en_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\table\merge_cells.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\table\row.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\table\table.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\template\blank.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\template\css\template.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\template\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\template\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\template\js\template.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\template\langs\en_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\template\template.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\visualchars\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\visualchars\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\wordcount\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\wordcount\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\xhtmlxtras\abbr.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\xhtmlxtras\acronym.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\xhtmlxtras\attributes.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\xhtmlxtras\cite.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\xhtmlxtras\css\attributes.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\xhtmlxtras\css\popup.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\xhtmlxtras\del.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\xhtmlxtras\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\xhtmlxtras\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\xhtmlxtras\ins.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\xhtmlxtras\js\abbr.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\xhtmlxtras\js\acronym.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\xhtmlxtras\js\attributes.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\xhtmlxtras\js\cite.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\xhtmlxtras\js\del.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\xhtmlxtras\js\element_common.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\xhtmlxtras\js\ins.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\backup\xhtmlxtras\langs\en_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\bbcode\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\bbcode\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\contextmenu\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\contextmenu\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\directionality\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\directionality\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\emotions\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\emotions\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\emotions\emotions.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\emotions\img\smiley-cool.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\emotions\img\smiley-cry.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\emotions\img\smiley-embarassed.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\emotions\img\smiley-foot-in-mouth.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\emotions\img\smiley-frown.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\emotions\img\smiley-innocent.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\emotions\img\smiley-kiss.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\emotions\img\smiley-laughing.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\emotions\img\smiley-money-mouth.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\emotions\img\smiley-sealed.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\emotions\img\smiley-smile.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\emotions\img\smiley-surprised.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\emotions\img\smiley-tongue-out.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\emotions\img\smiley-undecided.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\emotions\img\smiley-wink.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\emotions\img\smiley-yell.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\emotions\js\emotions.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\emotions\langs\en_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\emotions\langs\hr_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\example\dialog.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\example\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\example\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\example\img\example.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\example\js\dialog.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\example\langs\en.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\example\langs\en_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\fullpage\css\fullpage.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\fullpage\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\fullpage\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\fullpage\fullpage.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\fullpage\js\fullpage.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\fullpage\langs\en_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\fullpage\langs\hr_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\fullscreen\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\fullscreen\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\fullscreen\fullscreen.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\iespell\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\iespell\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\inlinepopups\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\inlinepopups\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\alert.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\button.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\buttons.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\confirm.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\corners.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\horizontal.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\vertical.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\window.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\inlinepopups\template.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\insertdatetime\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\insertdatetime\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\KeywordManager\css\KeywordManager.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\KeywordManager\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\KeywordManager\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\KeywordManager\image.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\KeywordManager\img\icon-AddKeyword.png" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\KeywordManager\img\icon-browse.png" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\KeywordManager\img\sample.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\KeywordManager\img\smiley-kiss.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\KeywordManager\js\KeywordManager.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\KeywordManager\langs\en_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\KeywordManager\langs\hr_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\layer\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\layer\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\legacyoutput\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\legacyoutput\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\lists\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\lists\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\media\css\media.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\media\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\media\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\media\js\embed.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\media\js\media.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\media\langs\en_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\media\langs\hr_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\media\media.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\media\moxieplayer.swf" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\nonbreaking\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\nonbreaking\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\noneditable\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\noneditable\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\pagebreak\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\pagebreak\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\paste\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\paste\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\paste\js\pastetext.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\paste\js\pasteword.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\paste\langs\en_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\paste\langs\hr_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\paste\pastetext.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\paste\pasteword.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\preview\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\preview\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\preview\example.html" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\preview\jscripts\embed.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\preview\preview.html" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\print\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\print\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\ResourcePicker\css\ResourcePicker.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\ResourcePicker\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\ResourcePicker\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\ResourcePicker\image.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\ResourcePicker\img\icon-browse.png" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\ResourcePicker\img\sample.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\ResourcePicker\img\smiley-kiss.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\ResourcePicker\js\ResourcePicker.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\ResourcePicker\langs\en_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\ResourcePicker\langs\hr_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\save\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\save\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\searchreplace\css\searchreplace.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\searchreplace\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\searchreplace\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\searchreplace\js\searchreplace.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\searchreplace\langs\en_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\searchreplace\langs\hr_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\searchreplace\searchreplace.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\spellchecker\css\content.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\spellchecker\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\spellchecker\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\spellchecker\img\wline.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\style\css\props.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\style\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\style\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\style\js\props.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\style\langs\en_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\style\langs\hr_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\style\props.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\tabfocus\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\tabfocus\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\table\cell.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\table\css\cell.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\table\css\row.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\table\css\table.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\table\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\table\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\table\js\cell.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\table\js\merge_cells.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\table\js\row.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\table\js\table.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\table\langs\en_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\table\langs\hr_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\table\merge_cells.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\table\row.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\table\table.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\template\blank.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\template\css\template.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\template\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\template\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\template\js\template.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\template\langs\en_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\template\langs\hr_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\template\template.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\visualchars\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\visualchars\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\wordcount\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\wordcount\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\xhtmlxtras\abbr.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\xhtmlxtras\acronym.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\xhtmlxtras\attributes.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\xhtmlxtras\cite.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\xhtmlxtras\css\attributes.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\xhtmlxtras\css\popup.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\xhtmlxtras\del.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\xhtmlxtras\editor_plugin.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\xhtmlxtras\editor_plugin_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\xhtmlxtras\ins.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\xhtmlxtras\js\abbr.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\xhtmlxtras\js\acronym.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\xhtmlxtras\js\attributes.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\xhtmlxtras\js\cite.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\xhtmlxtras\js\del.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\xhtmlxtras\js\element_common.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\xhtmlxtras\js\ins.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\xhtmlxtras\langs\en_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\plugins\xhtmlxtras\langs\hr_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\about.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\anchor.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\charmap.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\color_picker.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\editor_template.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\editor_template_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\image.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\img\colorpicker.jpg" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\img\flash.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\img\icons.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\img\iframe.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\img\pagebreak.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\img\quicktime.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\img\realmedia.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\img\shockwave.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\img\trans.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\img\video.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\img\windowsmedia.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\js\about.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\js\anchor.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\js\charmap.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\js\color_picker.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\js\image.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\js\link.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\js\source_editor.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\langs\en.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\langs\en_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\langs\hr.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\langs\hr_dlg.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\link.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\shortcuts.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\skins\default\content.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\skins\default\dialog.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\skins\default\img\buttons.png" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\skins\default\img\items.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\skins\default\img\menu_arrow.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\skins\default\img\menu_check.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\skins\default\img\progress.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\skins\default\img\tabs.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\skins\default\ui.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\skins\highcontrast\content.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\skins\highcontrast\dialog.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\skins\highcontrast\ui.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\skins\o2k7\content.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\skins\o2k7\dialog.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\skins\o2k7\img\button_bg.png" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\skins\o2k7\img\button_bg_black.png" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\skins\o2k7\img\button_bg_silver.png" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\skins\o2k7\ui.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\skins\o2k7\ui_black.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\skins\o2k7\ui_silver.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\advanced\source_editor.htm" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\simple\editor_template.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\simple\editor_template_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\simple\img\icons.gif" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\simple\langs\en.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\simple\langs\hr.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\simple\skins\default\content.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\simple\skins\default\ui.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\simple\skins\o2k7\content.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\simple\skins\o2k7\img\button_bg.png" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\themes\simple\skins\o2k7\ui.css" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\tiny_mce.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\tiny_mce_popup.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\tiny_mce_src.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\utils\editable_selects.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\utils\form_utils.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\utils\mctabs.js" />
+    <Content Include="Themes\Default\Scripts\tiny_mce\utils\validate.js" />
+    <Content Include="UserControls\CertificatesGrid.ascx" />
+    <Content Include="UserControls\CertificateTypesGrid.ascx" />
+    <Content Include="UserControls\CourseGroupsGrid.ascx" />
+    <Content Include="UserControls\DatePicker.ascx" />
+    <Content Include="UserControls\DeleteConfirmation.ascx" />
+    <Content Include="UserControls\Header.ascx" />
+    <Content Include="UserControls\LeftMenu.ascx" />
+    <Content Include="UserControls\LoginMenu.ascx" />
+    <Content Include="UserControls\Message\MessageBox.ascx" />
+    <Content Include="UserControls\Message\MessageBoxService.asmx" />
+    <Content Include="UserControls\OrganizationalUnitsGrid.ascx" />
+    <Content Include="UserControls\RolesGrid.ascx" />
+    <Content Include="UserControls\SearchGrid.ascx" />
+    <Content Include="UserControls\StudentCertificateGrid.ascx" />
+    <Content Include="UserControls\StudentsGrid.ascx" />
+    <Content Include="UserControls\StudentStudiesGrid.ascx" />
+    <Content Include="UserControls\StudiesGrid.ascx" />
+    <Content Include="UserControls\StudyTypesGrid.ascx" />
+    <Content Include="UserControls\UsersGrid.ascx" />
+    <Content Include="UserEdit.aspx" />
+    <Content Include="UserRoles.aspx" />
+    <Content Include="Users.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseMasterPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CertificateEdit.aspx.cs">
+      <DependentUpon>CertificateEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CertificateEdit.aspx.designer.cs">
+      <DependentUpon>CertificateEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Certificates.aspx.cs">
+      <DependentUpon>Certificates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Certificates.aspx.designer.cs">
+      <DependentUpon>Certificates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CertificateTypeEdit.aspx.cs">
+      <DependentUpon>CertificateTypeEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CertificateTypeEdit.aspx.designer.cs">
+      <DependentUpon>CertificateTypeEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CertificateTypes.aspx.cs">
+      <DependentUpon>CertificateTypes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CertificateTypes.aspx.designer.cs">
+      <DependentUpon>CertificateTypes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CourseGroupEdit.aspx.cs">
+      <DependentUpon>CourseGroupEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CourseGroupEdit.aspx.designer.cs">
+      <DependentUpon>CourseGroupEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CourseGroups.aspx.cs">
+      <DependentUpon>CourseGroups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CourseGroups.aspx.designer.cs">
+      <DependentUpon>CourseGroups.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Exstensions.cs" />
+    <Compile Include="Helps.aspx.cs">
+      <DependentUpon>Helps.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Helps.aspx.designer.cs">
+      <DependentUpon>Helps.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModalMasterPage.Master.cs">
+      <DependentUpon>ModalMasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModalMasterPage.Master.designer.cs">
+      <DependentUpon>ModalMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="OrganizationalUnitEdit.aspx.cs">
+      <DependentUpon>OrganizationalUnitEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrganizationalUnitEdit.aspx.designer.cs">
+      <DependentUpon>OrganizationalUnitEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrganizationalUnits.aspx.cs">
+      <DependentUpon>OrganizationalUnits.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrganizationalUnits.aspx.designer.cs">
+      <DependentUpon>OrganizationalUnits.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoleEdit.aspx.cs">
+      <DependentUpon>RoleEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RoleEdit.aspx.designer.cs">
+      <DependentUpon>RoleEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Roles.aspx.cs">
+      <DependentUpon>Roles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Roles.aspx.designer.cs">
+      <DependentUpon>Roles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="StudentEdit.aspx.cs">
+      <DependentUpon>StudentEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentEdit.aspx.designer.cs">
+      <DependentUpon>StudentEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Students.aspx.cs">
+      <DependentUpon>Students.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Students.aspx.designer.cs">
+      <DependentUpon>Students.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Studies.aspx.cs">
+      <DependentUpon>Studies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Studies.aspx.designer.cs">
+      <DependentUpon>Studies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudyEdit.aspx.cs">
+      <DependentUpon>StudyEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudyEdit.aspx.designer.cs">
+      <DependentUpon>StudyEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudyTypeEdit.aspx.cs">
+      <DependentUpon>StudyTypeEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudyTypeEdit.aspx.designer.cs">
+      <DependentUpon>StudyTypeEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudyTypes.aspx.cs">
+      <DependentUpon>StudyTypes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudyTypes.aspx.designer.cs">
+      <DependentUpon>StudyTypes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BaseGrid.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\BaseUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseWebPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\CertificatesGrid.ascx.cs">
+      <DependentUpon>CertificatesGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\CertificatesGrid.ascx.designer.cs">
+      <DependentUpon>CertificatesGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CertificateTypesGrid.ascx.cs">
+      <DependentUpon>CertificateTypesGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\CertificateTypesGrid.ascx.designer.cs">
+      <DependentUpon>CertificateTypesGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CourseGroupsGrid.ascx.cs">
+      <DependentUpon>CourseGroupsGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\CourseGroupsGrid.ascx.designer.cs">
+      <DependentUpon>CourseGroupsGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DatePicker.ascx.cs">
+      <DependentUpon>DatePicker.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\DatePicker.ascx.designer.cs">
+      <DependentUpon>DatePicker.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DeleteConfirmation.ascx.cs">
+      <DependentUpon>DeleteConfirmation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\DeleteConfirmation.ascx.designer.cs">
+      <DependentUpon>DeleteConfirmation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LeftMenu.ascx.cs">
+      <DependentUpon>LeftMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\LeftMenu.ascx.designer.cs">
+      <DependentUpon>LeftMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LoginMenu.ascx.cs">
+      <DependentUpon>LoginMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\LoginMenu.ascx.designer.cs">
+      <DependentUpon>LoginMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Message\MessageBox.ascx.cs">
+      <DependentUpon>MessageBox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Message\MessageBox.ascx.designer.cs">
+      <DependentUpon>MessageBox.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Message\MessageBoxService.asmx.cs">
+      <DependentUpon>MessageBoxService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\OrganizationalUnitsGrid.ascx.cs">
+      <DependentUpon>OrganizationalUnitsGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\OrganizationalUnitsGrid.ascx.designer.cs">
+      <DependentUpon>OrganizationalUnitsGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RolesGrid.ascx.cs">
+      <DependentUpon>RolesGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\RolesGrid.ascx.designer.cs">
+      <DependentUpon>RolesGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SearchGrid.ascx.cs">
+      <DependentUpon>SearchGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\SearchGrid.ascx.designer.cs">
+      <DependentUpon>SearchGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\StudentCertificateGrid.ascx.cs">
+      <DependentUpon>StudentCertificateGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\StudentCertificateGrid.ascx.designer.cs">
+      <DependentUpon>StudentCertificateGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\StudentsGrid.ascx.cs">
+      <DependentUpon>StudentsGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\StudentsGrid.ascx.designer.cs">
+      <DependentUpon>StudentsGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\StudentStudiesGrid.ascx.cs">
+      <DependentUpon>StudentStudiesGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\StudentStudiesGrid.ascx.designer.cs">
+      <DependentUpon>StudentStudiesGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\StudiesGrid.ascx.cs">
+      <DependentUpon>StudiesGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\StudiesGrid.ascx.designer.cs">
+      <DependentUpon>StudiesGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\StudyTypesGrid.ascx.cs">
+      <DependentUpon>StudyTypesGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\StudyTypesGrid.ascx.designer.cs">
+      <DependentUpon>StudyTypesGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UsersGrid.ascx.cs">
+      <DependentUpon>UsersGrid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\UsersGrid.ascx.designer.cs">
+      <DependentUpon>UsersGrid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserEdit.aspx.cs">
+      <DependentUpon>UserEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserEdit.aspx.designer.cs">
+      <DependentUpon>UserEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserRoles.aspx.cs">
+      <DependentUpon>UserRoles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserRoles.aspx.designer.cs">
+      <DependentUpon>UserRoles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+    <Content Include="Scripts\dewplayer\covers\Thumbs.db" />
+    <Content Include="Themes\BlueNileAdmin\lib\.DS_Store" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\.gitignore" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\font\fontawesome-webfont.eot" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\font\fontawesome-webfont.ttf" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\font\fontawesome-webfont.woff" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\font\museo_slab_300-webfont.eot" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\font\museo_slab_300-webfont.ttf" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\font\museo_slab_500-webfont.eot" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\font\museo_slab_500-webfont.ttf" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\font\proximanova-webfont.eot" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\font\proximanova-webfont.ttf" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\font-awesome-ie7.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\font-awesome.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\font-site.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\mixins.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\site.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\accordion.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\alerts.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\bootstrap.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\breadcrumbs.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\button-groups.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\buttons.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\carousel.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\close.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\code.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\component-animations.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\dropdowns.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\forms.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\grid.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\hero-unit.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\labels-badges.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\layouts.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\mixins.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\modals.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\navbar.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\navs.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\pager.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\pagination.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\popovers.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\progress-bars.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\reset.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\responsive-1200px-min.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\responsive-767px-max.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\responsive-768px-979px.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\responsive-navbar.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\responsive-utilities.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\responsive.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\scaffolding.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\sprites.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\tables.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\thumbnails.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\tooltip.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\type.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\utilities.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\variables.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\twbs-203\wells.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\docs\assets\less\variables.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\FontAwesome-Vectors.pdf" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\FontAwesome.ttf" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\font\fontawesome-webfont.eot" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\font\fontawesome-webfont.ttf" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\font\fontawesome-webfont.woff" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\less\font-awesome-ie7.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\less\font-awesome.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\README.md" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\sass\font-awesome.sass" />
+    <Content Include="Themes\BlueNileAdmin\lib\font-awesome\sass\font-awesome.scss" />
+    <Content Include="Themes\BlueNileAdmin\lib\fullcalendar-1.5.3\demos\json-events.php" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\.DS_Store" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\.gitignore" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\font\fontawesome-webfont.eot" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\font\fontawesome-webfont.ttf" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\font\fontawesome-webfont.woff" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\font\museo_slab_300-webfont.eot" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\font\museo_slab_300-webfont.ttf" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\font\museo_slab_500-webfont.eot" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\font\museo_slab_500-webfont.ttf" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\font\proximanova-webfont.eot" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\font\proximanova-webfont.ttf" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\font-awesome-ie7.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\font-awesome.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\font-site.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\mixins.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\site.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\accordion.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\alerts.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\bootstrap.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\breadcrumbs.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\button-groups.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\buttons.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\carousel.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\close.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\code.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\component-animations.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\dropdowns.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\forms.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\grid.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\hero-unit.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\labels-badges.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\layouts.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\mixins.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\modals.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\navbar.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\navs.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\pager.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\pagination.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\popovers.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\progress-bars.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\reset.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\responsive-1200px-min.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\responsive-767px-max.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\responsive-768px-979px.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\responsive-navbar.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\responsive-utilities.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\responsive.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\scaffolding.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\sprites.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\tables.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\thumbnails.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\tooltip.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\type.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\utilities.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\variables.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\twbs-203\wells.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\docs\assets\less\variables.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\FontAwesome-Vectors.pdf" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\FontAwesome.ttf" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\font\fontawesome-webfont.eot" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\font\fontawesome-webfont.ttf" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\font\fontawesome-webfont.woff" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\less\font-awesome-ie7.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\less\font-awesome.less" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\README.md" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\sass\font-awesome.sass" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\font-awesome\sass\font-awesome.scss" />
+    <Content Include="Themes\BlueNileAdmin\lib\lib\fullcalendar-1.5.3\demos\json-events.php" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_LocalResources\" />
+    <Folder Include="Themes\Default\Scripts\tiny_mce\plugins\advimage\imageupload\" />
+    <Folder Include="Themes\Default\Scripts\tiny_mce\plugins\backup\media\img\" />
+    <Folder Include="Themes\Default\Scripts\tiny_mce\plugins\backup\pagebreak\css\" />
+    <Folder Include="Themes\Default\Scripts\tiny_mce\plugins\backup\pagebreak\img\" />
+    <Folder Include="Themes\Default\Scripts\tiny_mce\plugins\media\img\" />
+    <Folder Include="Themes\Default\Scripts\tiny_mce\plugins\pagebreak\css\" />
+    <Folder Include="Themes\Default\Scripts\tiny_mce\plugins\pagebreak\img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UserControls\App_LocalResources\LeftMenu.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Seds.DataAccess\Seds.DataAccess.csproj">
+      <Project>{60ab56a5-e5ce-4e00-81b7-79eb06df95a8}</Project>
+      <Name>Seds.DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50864</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50864/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

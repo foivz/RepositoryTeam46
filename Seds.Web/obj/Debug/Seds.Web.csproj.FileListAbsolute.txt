@@ -1,0 +1,14 @@
+D:\Projects\SEDS\SEDS\Seds.Web\bin\Seds.Web.dll.config
+D:\Projects\SEDS\SEDS\Seds.Web\bin\Seds.Web.dll
+D:\Projects\SEDS\SEDS\Seds.Web\bin\Seds.Web.pdb
+D:\Projects\SEDS\SEDS\Seds.Web\obj\Debug\Seds.Web.dll
+D:\Projects\SEDS\SEDS\Seds.Web\obj\Debug\Seds.Web.pdb
+D:\Projects\SEDS\SEDS\Seds.Web\obj\Debug\Seds.Web.csprojResolveAssemblyReference.cache
+D:\Projects\SEDS\SEDS\Seds.Web\obj\Debug\Seds.Web.csproj.GenerateResource.Cache
+D:\Projects\SEDS\SEDS\Seds.Web\obj\Debug\Seds.Web.UserControls.App_LocalResources.LeftMenu.ascx.resources
+D:\Projects\SEDS\SEDS\Seds.Web\bin\Seds.DataAccess.dll
+D:\Projects\SEDS\SEDS\Seds.Web\bin\EntityFramework.dll
+D:\Projects\SEDS\SEDS\Seds.Web\bin\Seds.DataAccess.pdb
+D:\Projects\SEDS\SEDS\Seds.Web\bin\EntityFramework.xml
+D:\Projects\SEDS\SEDS\Seds.Web\bin\EntityFramework.SqlServer.dll
+D:\Projects\SEDS\SEDS\Seds.Web\bin\EntityFramework.SqlServer.xml

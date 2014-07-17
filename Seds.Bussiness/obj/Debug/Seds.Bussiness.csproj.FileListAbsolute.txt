@@ -1,0 +1,9 @@
+D:\Projects\SEDS\SEDS\Seds.Bussiness\bin\Debug\Seds.Bussiness.dll
+D:\Projects\SEDS\SEDS\Seds.Bussiness\bin\Debug\Seds.Bussiness.pdb
+D:\Projects\SEDS\SEDS\Seds.Bussiness\bin\Debug\Seds.DataAccess.dll
+D:\Projects\SEDS\SEDS\Seds.Bussiness\bin\Debug\Seds.DataAccess.pdb
+D:\Projects\SEDS\SEDS\Seds.Bussiness\obj\Debug\Seds.Bussiness.csprojResolveAssemblyReference.cache
+D:\Projects\SEDS\SEDS\Seds.Bussiness\obj\Debug\Seds.Bussiness.dll
+D:\Projects\SEDS\SEDS\Seds.Bussiness\obj\Debug\Seds.Bussiness.pdb
+D:\Projects\SEDS\SEDS\Seds.Bussiness\bin\Debug\EntityFramework.dll
+D:\Projects\SEDS\SEDS\Seds.Bussiness\bin\Debug\EntityFramework.xml

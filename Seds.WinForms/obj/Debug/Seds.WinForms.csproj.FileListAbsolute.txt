@@ -1,0 +1,15 @@
+D:\Projects\SEDS\SEDS\Seds.WinForms\bin\Debug\Seds.WinForms.exe.config
+D:\Projects\SEDS\SEDS\Seds.WinForms\bin\Debug\Seds.WinForms.exe
+D:\Projects\SEDS\SEDS\Seds.WinForms\bin\Debug\Seds.WinForms.pdb
+D:\Projects\SEDS\SEDS\Seds.WinForms\obj\Debug\Seds.WinForms.csprojResolveAssemblyReference.cache
+D:\Projects\SEDS\SEDS\Seds.WinForms\obj\Debug\Seds.WinForms.Properties.Resources.resources
+D:\Projects\SEDS\SEDS\Seds.WinForms\obj\Debug\Seds.WinForms.csproj.GenerateResource.Cache
+D:\Projects\SEDS\SEDS\Seds.WinForms\obj\Debug\Seds.WinForms.exe
+D:\Projects\SEDS\SEDS\Seds.WinForms\obj\Debug\Seds.WinForms.pdb
+D:\Projects\SEDS\SEDS\Seds.WinForms\obj\Debug\Seds.WinForms.MasterForm.resources
+D:\Projects\SEDS\SEDS\Seds.WinForms\obj\Debug\Seds.WinForms.SedsResources.resources
+D:\Projects\SEDS\SEDS\Seds.WinForms\bin\Debug\Seds.DataAccess.dll
+D:\Projects\SEDS\SEDS\Seds.WinForms\bin\Debug\EntityFramework.dll
+D:\Projects\SEDS\SEDS\Seds.WinForms\bin\Debug\Seds.DataAccess.pdb
+D:\Projects\SEDS\SEDS\Seds.WinForms\bin\Debug\EntityFramework.xml
+D:\Projects\SEDS\SEDS\Seds.WinForms\obj\Debug\Seds.WinForms.CertificateTypeForm.resources

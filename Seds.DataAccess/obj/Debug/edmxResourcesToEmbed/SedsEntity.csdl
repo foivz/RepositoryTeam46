@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SEDSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Certificate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CertificateNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TypeId" Type="Int32" Nullable="false" />
+    <Property Name="GraduationDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="CertificateType" Relationship="Self.FK_Certificates_CertificateTypes" FromRole="Certificates" ToRole="CertificateTypes" />
+    <NavigationProperty Name="Students" Relationship="Self.Student_Certificates" FromRole="Certificates" ToRole="Students" />
+  </EntityType>
+  <EntityType Name="CertificateType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Certificates" Relationship="Self.FK_Certificates_CertificateTypes" FromRole="CertificateTypes" ToRole="Certificates" />
+  </EntityType>
+  <EntityType Name="CourseGroup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TitleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Studies" Relationship="Self.FK_Studies_CourseGroups" FromRole="CourseGroups" ToRole="Studies" />
+    <NavigationProperty Name="OrganizationalUnits" Relationship="Self.OrganizationalUnit_CourseGroupes" FromRole="CourseGroups" ToRole="OrganizationalUnits" />
+  </EntityType>
+  <EntityType Name="OrganizationalUnit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TitleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IdIsvu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CourseGroups" Relationship="Self.OrganizationalUnit_CourseGroupes" FromRole="OrganizationalUnits" ToRole="CourseGroups" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Users_Roles" FromRole="Roles" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Student_Studies">
+    <Key>
+      <PropertyRef Name="StudentId" />
+      <PropertyRef Name="StudyId" />
+    </Key>
+    <Property Name="StudentId" Type="Int32" Nullable="false" />
+    <Property Name="StudyId" Type="Int32" Nullable="false" />
+    <Property Name="EnrollmentYear" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Student" Relationship="Self.FK_Student_Studies_Students" FromRole="Student_Studies" ToRole="Students" />
+    <NavigationProperty Name="Study" Relationship="Self.FK_Student_Studies_Studies" FromRole="Student_Studies" ToRole="Studies" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BirthLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="Int32" Nullable="false" />
+    <Property Name="BirthDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="JMBG" Type="String" MaxLength="13" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="OIB" Type="String" MaxLength="11" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="UniqueNumber" Type="Int32" Nullable="false" />
+    <Property Name="AverageRating" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AverageGroup1" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AverageGroup2" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Verified" Type="Boolean" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ImagePath" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Student_Studies" Relationship="Self.FK_Student_Studies_Students" FromRole="Students" ToRole="Student_Studies" />
+    <NavigationProperty Name="Certificates" Relationship="Self.Student_Certificates" FromRole="Students" ToRole="Certificates" />
+  </EntityType>
+  <EntityType Name="Study">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CourseGroupId" Type="Int32" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Duration" Type="Int32" Nullable="false" />
+    <Property Name="ECTS" Type="Int32" Nullable="false" />
+    <Property Name="TypeId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CourseGroup" Relationship="Self.FK_Studies_CourseGroups" FromRole="Studies" ToRole="CourseGroups" />
+    <NavigationProperty Name="Student_Studies" Relationship="Self.FK_Student_Studies_Studies" FromRole="Studies" ToRole="Student_Studies" />
+    <NavigationProperty Name="StudyType" Relationship="Self.FK_Studies_StudyTypes" FromRole="Studies" ToRole="StudyTypes" />
+  </EntityType>
+  <EntityType Name="StudyType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Studies" Relationship="Self.FK_Studies_StudyTypes" FromRole="StudyTypes" ToRole="Studies" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="User_Roles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="RoleId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="Self.FK_User_Roles_Users" FromRole="User_Roles" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleId" Type="Int32" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Role" Relationship="Self.FK_Users_Roles" FromRole="Users" ToRole="Roles" />
+    <NavigationProperty Name="User_Roles" Relationship="Self.FK_User_Roles_Users" FromRole="Users" ToRole="User_Roles" />
+  </EntityType>
+  <Association Name="FK_Certificates_CertificateTypes">
+    <End Role="CertificateTypes" Type="Self.CertificateType" Multiplicity="1" />
+    <End Role="Certificates" Type="Self.Certificate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CertificateTypes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Certificates">
+        <PropertyRef Name="TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Studies_CourseGroups">
+    <End Role="CourseGroups" Type="Self.CourseGroup" Multiplicity="1" />
+    <End Role="Studies" Type="Self.Study" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CourseGroups">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Studies">
+        <PropertyRef Name="CourseGroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Roles">
+    <End Role="Roles" Type="Self.Role" Multiplicity="1" />
+    <End Role="Users" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_Studies_Students">
+    <End Role="Students" Type="Self.Student" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Student_Studies" Type="Self.Student_Studies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Students">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Student_Studies">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_Studies_Studies">
+    <End Role="Studies" Type="Self.Study" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Student_Studies" Type="Self.Student_Studies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Studies">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Student_Studies">
+        <PropertyRef Name="StudyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Studies_StudyTypes">
+    <End Role="StudyTypes" Type="Self.StudyType" Multiplicity="1" />
+    <End Role="Studies" Type="Self.Study" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StudyTypes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Studies">
+        <PropertyRef Name="TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Roles_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="User_Roles" Type="Self.User_Roles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="User_Roles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OrganizationalUnit_CourseGroupes">
+    <End Role="CourseGroups" Type="Self.CourseGroup" Multiplicity="*" />
+    <End Role="OrganizationalUnits" Type="Self.OrganizationalUnit" Multiplicity="*" />
+  </Association>
+  <Association Name="Student_Certificates">
+    <End Role="Certificates" Type="Self.Certificate" Multiplicity="*" />
+    <End Role="Students" Type="Self.Student" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="SEDSEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Certificates" EntityType="Self.Certificate" />
+    <EntitySet Name="CertificateTypes" EntityType="Self.CertificateType" />
+    <EntitySet Name="CourseGroups" EntityType="Self.CourseGroup" />
+    <EntitySet Name="OrganizationalUnits" EntityType="Self.OrganizationalUnit" />
+    <EntitySet Name="Roles" EntityType="Self.Role" />
+    <EntitySet Name="Student_Studies" EntityType="Self.Student_Studies" />
+    <EntitySet Name="Students" EntityType="Self.Student" />
+    <EntitySet Name="Studies" EntityType="Self.Study" />
+    <EntitySet Name="StudyTypes" EntityType="Self.StudyType" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="User_Roles" EntityType="Self.User_Roles" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK_Certificates_CertificateTypes" Association="Self.FK_Certificates_CertificateTypes">
+      <End Role="CertificateTypes" EntitySet="CertificateTypes" />
+      <End Role="Certificates" EntitySet="Certificates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Studies_CourseGroups" Association="Self.FK_Studies_CourseGroups">
+      <End Role="CourseGroups" EntitySet="CourseGroups" />
+      <End Role="Studies" EntitySet="Studies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Roles" Association="Self.FK_Users_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_Studies_Students" Association="Self.FK_Student_Studies_Students">
+      <End Role="Students" EntitySet="Students" />
+      <End Role="Student_Studies" EntitySet="Student_Studies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_Studies_Studies" Association="Self.FK_Student_Studies_Studies">
+      <End Role="Studies" EntitySet="Studies" />
+      <End Role="Student_Studies" EntitySet="Student_Studies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Studies_StudyTypes" Association="Self.FK_Studies_StudyTypes">
+      <End Role="StudyTypes" EntitySet="StudyTypes" />
+      <End Role="Studies" EntitySet="Studies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Roles_Users" Association="Self.FK_User_Roles_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="User_Roles" EntitySet="User_Roles" />
+    </AssociationSet>
+    <AssociationSet Name="OrganizationalUnit_CourseGroupes" Association="Self.OrganizationalUnit_CourseGroupes">
+      <End Role="CourseGroups" EntitySet="CourseGroups" />
+      <End Role="OrganizationalUnits" EntitySet="OrganizationalUnits" />
+    </AssociationSet>
+    <AssociationSet Name="Student_Certificates" Association="Self.Student_Certificates">
+      <End Role="Certificates" EntitySet="Certificates" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(SEDSModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(SEDSModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="spSearchStudents" ReturnType="Collection(SEDSModel.spSearchStudents_Result)">
+      <Parameter Name="Phrase" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spSearchStudents_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="BirthLastName" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Gender" Nullable="false" />
+    <Property Type="DateTime" Name="BirthDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="JMBG" Nullable="false" MaxLength="13" />
+    <Property Type="String" Name="OIB" Nullable="false" MaxLength="11" />
+    <Property Type="Int32" Name="UniqueNumber" Nullable="false" />
+    <Property Type="Decimal" Name="AverageRating" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="AverageGroup1" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="AverageGroup2" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Boolean" Name="Verified" Nullable="true" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PhoneNumber" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ImagePath" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Note" Nullable="true" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="IsDeleted" Nullable="false" />
+  </ComplexType>
+</Schema>

@@ -1,0 +1,17 @@
+D:\Projects\SEDS\SEDS\Seds.DataAccess\bin\Debug\Seds.DataAccess.dll
+D:\Projects\SEDS\SEDS\Seds.DataAccess\bin\Debug\Seds.DataAccess.pdb
+D:\Projects\SEDS\SEDS\Seds.DataAccess\obj\Debug\Seds.DataAccess.dll
+D:\Projects\SEDS\SEDS\Seds.DataAccess\obj\Debug\Seds.DataAccess.pdb
+D:\Projects\SEDS\SEDS\Seds.DataAccess\bin\Debug\Seds.DataAccess.dll.config
+D:\Projects\SEDS\SEDS\Seds.DataAccess\bin\Debug\EntityFramework.dll
+D:\Projects\SEDS\SEDS\Seds.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\SEDS\SEDS\Seds.DataAccess\bin\Debug\EntityFramework.xml
+D:\Projects\SEDS\SEDS\Seds.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\SEDS\SEDS\Seds.DataAccess\bin\Debug\AutoMapper.Net4.dll
+D:\Projects\SEDS\SEDS\Seds.DataAccess\bin\Debug\AutoMapper.dll
+D:\Projects\SEDS\SEDS\Seds.DataAccess\bin\Debug\KellermanSoftware.Compare-NET-Objects.dll
+D:\Projects\SEDS\SEDS\Seds.DataAccess\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\SEDS\SEDS\Seds.DataAccess\bin\Debug\AutoMapper.xml
+D:\Projects\SEDS\SEDS\Seds.DataAccess\bin\Debug\KellermanSoftware.Compare-NET-Objects.xml
+D:\Projects\SEDS\SEDS\Seds.DataAccess\bin\Debug\Newtonsoft.Json.xml
+D:\Projects\SEDS\SEDS\Seds.DataAccess\obj\Debug\Seds.DataAccess.csprojResolveAssemblyReference.cache

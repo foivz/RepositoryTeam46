@@ -1,0 +1,127 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Seds.Web.Site" %>
+<%@ Register Src="~/UserControls/Message/MessageBox.ascx" TagPrefix="uc" TagName="MessageBox" %>
+<%@ Register Src="~/UserControls/Header.ascx" TagPrefix="uc" TagName="Header" %>
+<%@ Register Src="~/UserControls/LeftMenu.ascx" TagPrefix="uc" TagName="LeftMenu" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title><%= PageTitle %></title>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Themes/BlueNileAdmin/lib/bootstrap/css/bootstrap.css") %>" />
+    <link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Themes/BlueNileAdmin/stylesheets/theme.css") %>" />
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Themes/BlueNileAdmin/lib/font-awesome/css/font-awesome.css") %>" />
+    
+    <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/i18n/jquery.ui.datepicker-hr.js"></script>
+
+    <script type="text/javascript" src="<%= ResolveUrl("~/Themes/Default/jquery.fancybox-1.3.4") %>/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/Themes/Default/jquery.fancybox-1.3.4") %>/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    <link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/Themes/Default/jquery.fancybox-1.3.4") %>/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+
+    <script src="<%= ResolveUrl("~/Scripts/Utils.js") %>" type="text/javascript"></script>
+    
+    <style type="text/css">
+        #line-chart {
+            height: 300px;
+            width: 800px;
+            margin: 0px auto;
+            margin-top: 1em;
+        }
+
+        .brand {
+            font-family: georgia, serif;
+        }
+
+            .brand .first {
+                color: #ccc;
+                font-style: italic;
+            }
+
+            .brand .second {
+                color: #fff;
+                font-weight: bold;
+            }
+    </style>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png" />
+
+    <script type="text/javascript">
+        $(function () {
+            $.datepicker.setDefaults($.datepicker.regional["hr"]);
+            $(".datepicker").datepicker({
+                changeMonth: true,
+                changeYear: true,
+                dateFormat: 'dd.mm.yy.',
+            });
+        });
+
+       
+        SadaCore.RegisterNameSpace("Seds.Web.Config");
+        Seds.Web.Config.ResourcePickerUrl = '<%= ResolveUrl("~/ResourcePicker.aspx") %>';
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+
+<!--[if lt IE 7 ]> <body class="ie ie6"> <![endif]-->
+<!--[if IE 7 ]> <body class="ie ie7 "> <![endif]-->
+<!--[if IE 8 ]> <body class="ie ie8 "> <![endif]-->
+<!--[if IE 9 ]> <body class="ie ie9 "> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<body class="">
+    <!--<![endif]-->
+    <form id="form1" runat="server">
+        <button style="display:none;"></button>
+        <asp:ScriptManager ID="ScriptManager" runat="server"></asp:ScriptManager>
+        <div class="navbar">
+            <uc:Header runat="server" ID="Header" />
+        </div>       
+        <uc:LeftMenu runat="server" ID="ucLeftMenu" />
+        <div class="content">
+            <div class="header">
+                <h1 class="page-title"><%= PageSubTitle %></h1>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="row-fluid">
+                        <uc:MessageBox runat="server" ID="ucMessageBox" />
+                        <asp:ContentPlaceHolder ID="content" runat="server"></asp:ContentPlaceHolder>
+                        <footer>
+                            <hr>
+
+                            <!-- Purchase a site license to remove this link from the footer: http://www.portnine.com/bootstrap-themes -->
+                            <p class="pull-right">© 2012 A Free Bootstrap Theme by <a href="http://www.portnine.com" target="_blank">Portnine</a></p>
+
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="<%= ResolveUrl("~/Themes/BlueNileAdmin/lib/bootstrap/js/bootstrap.js") %>"></script>
+        <script type="text/javascript">
+            $("[rel=tooltip]").tooltip();
+            $(function () {
+                $('.demo-cancel-click').click(function () { return false; });
+            });
+        </script>
+    </form>
+</body>
+</html>

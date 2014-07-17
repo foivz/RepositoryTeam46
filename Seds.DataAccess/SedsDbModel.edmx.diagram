@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9cce14feb00044e78161e65ef094bf10" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="SEDSModel.Certificate" Width="1.5" PointX="3.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEDSModel.CertificateType" Width="1.5" PointX="1.5" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEDSModel.CourseGroup" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEDSModel.OrganizationalUnit" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEDSModel.Role" Width="1.5" PointX="8.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEDSModel.Student_Studies" Width="1.5" PointX="8.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEDSModel.Student" Width="1.5" PointX="6" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEDSModel.Study" Width="1.5" PointX="6" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEDSModel.StudyType" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEDSModel.sysdiagram" Width="1.5" PointX="8.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEDSModel.User_Roles" Width="1.5" PointX="13.25" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SEDSModel.User" Width="1.5" PointX="11" PointY="6.625" IsExpanded="true" />
+        <AssociationConnector Association="SEDSModel.FK_Certificates_CertificateTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="SEDSModel.FK_Studies_CourseGroups" ManuallyRouted="false" />
+        <AssociationConnector Association="SEDSModel.FK_Users_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="SEDSModel.FK_Student_Studies_Students" ManuallyRouted="false" />
+        <AssociationConnector Association="SEDSModel.FK_Student_Studies_Studies" ManuallyRouted="false" />
+        <AssociationConnector Association="SEDSModel.FK_Studies_StudyTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="SEDSModel.FK_User_Roles_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="SEDSModel.OrganizationalUnit_CourseGroupes" ManuallyRouted="false" />
+        <AssociationConnector Association="SEDSModel.Student_Certificates" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
